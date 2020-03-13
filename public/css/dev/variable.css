@@ -1,0 +1,42 @@
+@import url(../../fonts/web/stylesheet.css);
+.futura_std_bold {
+  font-family: "Futura Std";
+  font-weight: bold;
+  font-style: normal; }
+
+.futura_md {
+  font-family: "Futura Md BT"; }
+
+.optima_bold {
+  font-family: "Optima LT Std";
+  font-weight: bold;
+  font-style: normal; }
+
+.optima_std {
+  font-family: "Optima LT Std";
+  font-weight: normal;
+  font-style: normal; }
+
+.yellow {
+  color: #FCDA15; }
+
+.green-b {
+  background-color: #026830;
+  color: white; }
+
+.green {
+  color: #004B23; }
+
+.text-bigger {
+  font-size: 35pt;
+  text-shadow: 2px 4px 0px black; }
+
+.text-big {
+  font-size: 26pt;
+  text-shadow: 2px 4px 0px black;
+  letter-spacing: 3px; }
+
+.text-info-2 {
+  color: #3EB7FF; }
+
+/*# sourceMappingURL=variable.css.map */

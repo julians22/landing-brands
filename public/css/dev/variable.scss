@@ -1,0 +1,60 @@
+@import url(../../fonts/web/stylesheet.css);
+
+$font_futura_std : 'Futura Std';
+$font_futura_md : 'Futura Md BT';
+$font_optima: 'Optima LT Std';
+
+$color_yellow : #FCDA15;
+$color_green : #004B23;
+$color_green_1 : #026830;
+$color_blue : #3EB7FF;
+
+.futura_std_bold {
+    font-family: $font_futura_std;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.futura_md {
+    font-family: $font_futura_md;
+}
+
+.optima_bold {
+    font-family: $font_optima;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.optima_std {
+    font-family: $font_optima;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.yellow{
+    color: $color_yellow;
+}
+
+.green-b{
+    background-color:$color_green_1;
+    color: white;
+}
+
+.green{
+    color: $color_green;
+}
+
+.text-bigger {
+    font-size: 35pt;
+    text-shadow: 2px 4px 0px black;
+}
+
+.text-big{
+    font-size: 26pt;
+    text-shadow: 2px 4px 0px black;
+    letter-spacing: 3px;
+}
+
+.text-info-2{
+    color: $color_blue;
+}
