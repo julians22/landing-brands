@@ -53,6 +53,8 @@
             (function() {
                 document.querySelector("#custForm").addEventListener("submit", function(e) {
                         e.preventDefault();
+                        $('span#send').css('display', 'none');
+                        $('span#spinner').css('display', 'inline-block');
                         axios.post(this.action, {
                                 nama: document.querySelector("#nama").value,
                                 email: document.querySelector("#email").value,
@@ -61,25 +63,42 @@
                             })
                             .then(response => {
                                 clearErrors();
+                                $('span#spinner').css('display', 'none');
+                                $('span#send').css('display', 'inline-block');
                                 $('.success-modal').modal('show');
                                 this.reset();
                             })
                             .catch(error => {
                                 const errors = error.response.data.errors;
-                                const firstItem = Object.keys(errors)[0];
-                                const firstItemDOM = document.getElementById(firstItem);
-                                const firstErrorMessage = errors[firstItem][0];
-
                                 clearErrors();
+                                for(var i in errors){
+                                  if(errors.hasOwnProperty(i)){
+                                    var find_input = $('#' + i);
+                                    var error_msg = errors[i][0];
+                                    find_input.after(`<div class="text-danger futura_std_bold">`+ error_msg +`</div>`);
+                                    //
+                                    // console.log(i);
+                                    // console.log(errors[i][0]);
+                                  }
+                                }
+                                $('span#spinner').css('display', 'none');
+                                $('span#send').css('display', 'inline-block');
+
+
+                                // const firstItem = Object.keys(errors)[0];
+                                // const firstItemDOM = document.getElementById(firstItem);
+                                // const firstErrorMessage = errors[firstItem][0];
+
+                                // clearErrors();
 
                                 // show the error message
-                                firstItemDOM.insertAdjacentHTML(
-                                    "afterend",
-                                    `<div class="text-danger futura_std_bold">${firstErrorMessage}</div>`
-                                );
+                                // firstItemDOM.insertAdjacentHTML(
+                                //     "afterend",
+                                //     `<div class="text-danger futura_std_bold">${firstErrorMessage}</div>`
+                                // );
 
                                 // highlight the form control with the error
-                                firstItemDOM.classList.add("border", "border-danger");
+                                // firstItemDOM.classList.add("border", "border-danger");
                             });
                     });
 
@@ -95,6 +114,7 @@
                     );
                 }
             })();
+
             function showModal() {
                 var n = $('#term');
                 if (n.prop("checked") == true) {

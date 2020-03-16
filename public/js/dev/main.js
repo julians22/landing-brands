@@ -12,6 +12,7 @@ function showModal() {
 (function() {
     document.querySelector("#custForm").addEventListener("submit", function(e) {
             e.preventDefault();
+
             axios.post(this.action, {
                     nama: document.querySelector("#nama").value,
                     email: document.querySelector("#email").value,
@@ -29,8 +30,14 @@ function showModal() {
                     const firstItem = Object.keys(errors)[0];
                     const firstItemDOM = document.getElementById(firstItem);
                     const firstErrorMessage = errors[firstItem][0];
+                    errors.forEach((item, i) => {
+                      console.log(item);
+                    });
 
                     clearErrors();
+
+
+
 
                     // show the error message
                     firstItemDOM.insertAdjacentHTML(

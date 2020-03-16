@@ -156,6 +156,8 @@ form button.my-btn {
   align-items: center;
   width: 140px;
   transition: all .2s ease-in-out; }
+  form button.my-btn span#spinner {
+    display: none; }
   form button.my-btn:hover {
     color: #026830;
     transform: scale(1.1); }
@@ -204,7 +206,7 @@ form button.my-btn {
   font-weight: bold; }
 .quotes p {
   font-weight: normal;
-  font-size: 6pt; }
+  font-size: 10pt; }
 
 .video-button {
   position: relative;

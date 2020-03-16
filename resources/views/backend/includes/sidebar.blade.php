@@ -13,8 +13,21 @@
                 </a>
             </li>
 
-            @if ($logged_in_user->isAdmin())
+            {{-- @if ($logged_in_user->isAdmin()) --}}
                 <li class="nav-title">
+                    Information
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{
+                        active_class(Route::is('admin/view-cust'))
+                    }}" href="{{ route('admin.view-cust') }}">
+                        <i class="nav-icon fas fa-user-alt"></i>
+                        List Customer
+                    </a>
+                </li>
+
+                {{-- <li class="nav-title">
                     @lang('menus.backend.sidebar.system')
                 </li>
 
@@ -82,7 +95,7 @@
                         </li>
                     </ul>
                 </li>
-            @endif
+            @endif --}}
         </ul>
     </nav>
 

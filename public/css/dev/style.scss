@@ -29,6 +29,9 @@ form{
         line-height: 13px;
     }
     button.my-btn{
+        span#spinner{
+          display: none;
+        }
         background: #FFF9CC;
         background: radial-gradient(circle, #FFF9CC 0%, rgba(251, 237, 31, 1) 51%, rgba(255, 202, 7, 1) 100%);
         border-radius: 30em;
@@ -97,36 +100,35 @@ form{
 
     }
     p{
-        // margin-bottom: 4px;
         font-weight: normal;
-        font-size: 6pt;
+        font-size: 10pt;
     }
   }
 
-        .video-button{
-            position: relative;
-            display: block;
-            background-color: white;
-            border-radius: 12px;
-            max-width: 140px;
-            min-height: 28px;
-            text-align: right;
-            padding: 2px;
-            padding-right: 5px;
-            margin-left: 15px;
-            img {
-                width: 40px;
-                cursor: pointer;
-                border: none;
-                left: -18px;
-                top: -5px;
+  .video-button{
+      position: relative;
+      display: block;
+      background-color: white;
+      border-radius: 12px;
+      max-width: 140px;
+      min-height: 28px;
+      text-align: right;
+      padding: 2px;
+      padding-right: 5px;
+      margin-left: 15px;
+      img {
+          width: 40px;
+          cursor: pointer;
+          border: none;
+          left: -18px;
+          top: -5px;
 
-                &:hover {
-                    transform: scale(0.9);
-                    transition: cubic-bezier();
-                }
-            }
-        }
+          &:hover {
+              transform: scale(0.9);
+              transition: cubic-bezier();
+          }
+      }
+  }
 
 p{
     .text-big{

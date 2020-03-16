@@ -26,7 +26,7 @@
           <div class="col">
             <div class="quotes mt-2">
               <h4 class="optima_std text-white">#SiapJagaEnergi</h4>
-              <p class="optima_std text-white text-justify">BRAND’S Saripati Ayam adalah Suplemen Kesehatan yang terbuat dari 100% saripati ayam murni,
+              <p class="optima_std text-white">BRAND’S Saripati Ayam adalah Suplemen Kesehatan yang terbuat dari 100% saripati ayam murni,
                 terbukti dalam waktu 15 menit dapat meningkatkan metabolisme tubuh sehingga menghasilkan Energi
                 (tidak membuat menjadi lelah) yang bebas dari bahan kimia dan bahan pengawet sehingga aman di konsumsi
                 mulai dari anak sampai dewasa</p>
@@ -65,7 +65,13 @@
                       </label>
                   </div>
                   <input type="hidden" name="recaptcha" id="recaptcha">
-                  <button class="btn my-btn futura_std_bold green bg-warning" disabled>Submit</button>
+                  <button class="btn my-btn futura_std_bold green bg-warning" disabled>
+                    <span id="send">
+                      <i class="fas fa-paper-plane mr-1"></i>
+                    </span>
+                    <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true">
+                    </span>
+                  Submit</button>
               </form>
           </div>
         </div>

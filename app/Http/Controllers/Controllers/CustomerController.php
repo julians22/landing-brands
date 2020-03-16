@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Customer as RequestsCustomer;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderNotification;
 
 class CustomerController extends Controller
 {
@@ -16,7 +18,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::paginate(15);
+        return view('backend.customer', compact('customers'));
     }
 
     /**
@@ -69,6 +72,8 @@ class CustomerController extends Controller
             'nomor' => $request->nomor,
             'alamat' => $request->alamat,
         ]);
+        $mail_to = $request->email;
+        Mail::to($mail_to)->send(new OrderNotification());
         return response()->json(['success' => true]);
     }
 
@@ -115,5 +120,11 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function _sendMail($mail_to)
+    {
+
+      return;
     }
 }

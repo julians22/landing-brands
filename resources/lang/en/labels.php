@@ -111,6 +111,14 @@ return [
 
                 'view' => 'View User',
             ],
+
+        ],
+        'customer' => [
+          'name' => 'Full Nmae',
+          'email' => 'Email',
+          'phone' => 'Phone Number',
+          'address' => 'Address',
+          'join-date' => 'Join Date',
         ],
     ],
 
