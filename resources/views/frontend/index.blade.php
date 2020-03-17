@@ -3,81 +3,82 @@
 @section('title', app_name() . ' | ' . __('navs.general.home'))
 
 @section('content')
-        <nav class="navbar navbar-light bg-transparent">
-            <a href="#" class="navbar-brand">
-                <img src="{{ asset('img/general/logo-brands.png') }}" alt="" class="logo">
-            </a>
-        </nav>
-        <!-- logo navbar  -->
+<div class="row position-relative">
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <img src="{{ asset('img/general/logo-brands.png') }}" alt="" class="position-absolute mt-4">
+    </div>
+    <div class="col-sm-8 col-lg-8 col-xl-8 text-right mt-5">
+        <h1 class="text-bigger futura_std_bold yellow my-0">GRATIS 1 Paket</h1>
+        <p class="text-big futura_std_bold yellow my-0">BRAND'S Saripati Ayam</p>
+    </div>
+</div>
 
-        <div class="row justify-content-end text-right mt-0">
-            <div class="col-12 text-right">
-                <h1 class="text-bigger futura_std_bold yellow my-0">GRATIS 1 Paket</h1>
-                <p class="text-big futura_std_bold yellow my-0">BRAND'S Saripati Ayam</p>
-                <p class="futura_std_bold font-weight-normal text-white mt-0">hanya dengan mengisi lengkap data di bawah <br>ini dan klik tombol submit</p>
+<div class="row">
+    <div class="col-sm-auto col-md-6 col-lg-8 col-xl-9">
+        <div class="row no-gutters">
+            <div class="col-6">
+                <img src="{{ asset('img/general/img-3.png') }}" alt="" class="pr-0 w-100 bd-highlight">
             </div>
-        </div>
-        <!-- bigtext section -->
-
-        <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5 mr-2">
-            <img src="{{ asset('img/general/img-3.png') }}" alt="" class="d-inline-flex p-2 bd-highlight img-1">
-          </div>
-          <div class="col">
-            <div class="quotes mt-2">
-              <h4 class="optima_std text-white">#SiapJagaEnergi</h4>
-              <p class="optima_std text-white">BRAND’S Saripati Ayam adalah Suplemen Kesehatan yang terbuat dari 100% saripati ayam murni,
-                terbukti dalam waktu 15 menit dapat meningkatkan metabolisme tubuh sehingga menghasilkan Energi
-                (tidak membuat menjadi lelah) yang bebas dari bahan kimia dan bahan pengawet sehingga aman di konsumsi
-                mulai dari anak sampai dewasa</p>
+            <div class="col-6">
+                <h2 class="optima_std text-white mb-0">#SiapEnergiAntiDrop</h2>
+                <p class="optima_std text-white quotes pr-3">Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) yang lebih dikenal dengan nama virus Corona (COVID19) adalah jenis baru dari coronavirus 
+                    yang menular ke manusia. Virus ini bisa menyerang siapa saja, baik bayi, anak-anak, orang dewasa, lansia, ibu hamil, maupun ibu menyusui. <br>
+                    Mulailah untuk bisa bergaya hidup sehat dengan makan makanan sehat, tidur yang cukup agar Imun tubuh Anda semakin kuat. <br>            
+                    BRAND’S Saripati ayam adalah suplemen kesehatan alami yang mengandung bio amino peptide protein yang terbuat dari saripati ayam murni, dikemas dengan teknologi modern tanpa adanya tambahan bahan kimia dan bahan pengawet sehingga aman di konsumsi siapapun (sampai ke ibu hamil dan menyusui) 
+                    yang berguna memberikan energi pada sel imun tubuh kita. <br>
+                    Minum BRAND’S 1 botol setiap harinya. <br>
+                    <span class="yellow hash">#SiapEnergiAntiDrop</span>
+                </p>
                 <div class="video-button futura_std_bold green mt-n2">
-                  <a href="//www.youtube.com" target="_blank">
-                    <img class="position-absolute" src="{{ asset('img/general/button-1.svg') }}">
-                  </a>
-                  Science Video
+                    <a href="//www.youtube.com" target="_blank">
+                        <img class="position-absolute" src="{{ asset('img/general/button-1.svg') }}">
+                    </a>
+                    Science Video
                 </div>
-              </div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-xl-4 text-right mb-4">
-              <form id="custForm" method="POST" action="{{ route('frontend.customer.store') }}">
-                  @csrf
-                  <div class="form-group mb-1 futura_std_bold font-weight-normal text-white">
-                      <label for="nama" class="mb-0">Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
-                  </div>
-                  <div class="form-group mb-1 futura_std_bold font-weight-normal text-white">
-                      <label for="email" class="mb-0">Email</label>
-                      <input type="text" class="form-control" id="email" name="email">
-                  </div>
-                  <div class="form-group mb-1 futura_std_bold font-weight-normal text-white">
-                      <label for="nomor" class="mb-0">HP</label>
-                      <input type="text" class="form-control" id="nomor" name="nomor" value="{{ old('nomor') }}">
-                  </div>
-                  <div class="form-group mb-1 futura_std_bold font-weight-normal text-white">
-                      <label for="alamat" class="mb-0">Alamat Lengkap</label>
-                      <textarea class="form-control" id="alamat" rows="1" name="alamat">{{ old('alamat') }}</textarea>
-                  </div>
-                  <div class="text-left futura_std_bold text-info-2 heading-term mt-n2">Syarat dan ketentuan</div>
-                  <div class="form-check term_div text-left">
-                      <input class="form-check-input" type="checkbox" value="" id="term" name="term" onclick="showModal()">
-                      <label class="form-check-label optima_std text-white term_label ml-2" id="term_modal">
-                          Saya telah membaca dan menyetujui syarat dan ketentuan yang berlaku.
-                      </label>
-                  </div>
-                  <input type="hidden" name="recaptcha" id="recaptcha">
-                  <button class="btn my-btn futura_std_bold green bg-warning" disabled>
-                    <span id="send">
-                      <i class="fas fa-paper-plane mr-1"></i>
-                    </span>
-                    <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true">
-                    </span>
-                  Submit</button>
-              </form>
-          </div>
+                </div>
+            </div>
+        <div class="row">
+            <img src="{{ asset('img/general/img-2.png') }}" alt="" class="mt-5">
         </div>
-        <div class="row mt-0">
-          <div class="img-2 col-sm-12 col-md-7 col-xl-7">
-            <img src="{{ asset('img/general/img-2.png') }}" alt="" class="position-relative">
-          </div>
-        </div>
+    </div>
+    <div class="col-sm-auto col-md-6 col-lg-4 col-xl-3 text-right">
+        <p class="futura_std_bold font-weight-normal text-white">hanya dengan mengisi lengkap data di bawah ini
+            dan klik tombol submit</p>
+        <form id="custForm" method="POST" action="{{ route('frontend.customer.store') }}">
+            @csrf
+            <div class="form-group futura_std_bold font-weight-normal text-white">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
+            </div>
+            <div class="form-group futura_std_bold font-weight-normal text-white">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group futura_std_bold font-weight-normal text-white">
+                <label for="nomor">HP</label>
+                <input type="text" class="form-control" id="nomor" name="nomor" value="{{ old('nomor') }}">
+            </div>
+            <div class="form-group futura_std_bold font-weight-normal text-white mb-0">
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea class="form-control" id="alamat" rows="3" name="alamat">{{ old('alamat') }}</textarea>
+            </div>
+            <div class="text-left futura_std_bold text-info-2 heading-term mt-0">Syarat dan ketentuan</div>
+            <div class="form-check term_div text-left">
+                <input class="form-check-input" type="checkbox" value="" id="term" name="term" onclick="showModal()">
+                <label class="form-check-label optima_std text-white term_label ml-2" id="term_modal">
+                    Saya telah membaca dan menyetujui syarat dan ketentuan yang berlaku.
+                </label>
+            </div>
+            <input type="hidden" name="recaptcha" id="recaptcha">
+            <button class="btn my-btn futura_std_bold green bg-warning" disabled>
+                <span id="send">
+                    <i class="fas fa-paper-plane mr-1"></i>
+                </span>
+                <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true">
+                </span>
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
 @endsection

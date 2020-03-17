@@ -1,8 +1,8 @@
 <div class="box position-sticky py-3 text-center">
     <ul class="list-unstyled align-self-center my-0">
-        <li class="mb-3"><a href=""><i class="fab fa-instagram green fa-2x"></i></a></li>
-        <li class="mb-3"><a href=""><i class="fab fa-twitter green fa-2x"></i></a></li>
-        <li><a href=""><i class="fab fa-facebook-f green fa-2x"></i></a></li>
+        <li class="mb-3"><a target="_blank" href="https://www.instagram.com/brands_saripati_ayam" class="d-block"><i class="fab fa-instagram green fa-2x"></i></a></li>
+        <li class="mb-3"><a target="_blank" href="https://twitter.com/brandsessenceid" class="d-block"><i class="fab fa-twitter green fa-2x"></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/BrandsEssenceOfChickenID" class="d-block"><i class="fab fa-facebook-f green fa-2x"></i></a></li>
     </ul>
 </div>
 
@@ -36,8 +36,6 @@
     </div>
 </div>
 
-<footer class="footer position-fixed green-b pt-1">
-    <div class="container">
-        <div class="footer-text futura_std_bold font-weight-lighter"><a class="text-decoration-none text-white" target="_blank" href="https://brandsworld.co.id/">www.brandsworld.co.id</a>&nbsp       &nbsp       &nbsp|&nbsp       &nbsp       &nbspCopyright 2017 Suntory Beverage & Food Asia Pte Ltd. All Right Reserved.</div>
-    </div>
+<footer class="green-b text-center">
+    <div class="futura_std_bold font-weight-lighter pt-2"><a class="text-decoration-none text-white" target="_blank" href="https://brandsworld.co.id/">www.brandsworld.co.id</a>&nbsp       &nbsp       &nbsp|&nbsp       &nbsp       &nbspCopyright 2017 Suntory Beverage & Food Asia Pte Ltd. All Right Reserved.</div>
 </footer>

@@ -9,7 +9,7 @@ body{
 
 form{
     input[type=text]{
-        max-height: 28px
+        max-height: 35px
     }
     div.heading-term{
         text-shadow: 1px 2px 0px black;
@@ -20,7 +20,7 @@ form{
         margin-left: -12px;
     }
     .form-control{
-      border-radius: 0.5rem;
+        border-radius: 0.5rem;
     }
     label.term_label{
         font-size: 10px;
@@ -30,7 +30,7 @@ form{
     }
     button.my-btn{
         span#spinner{
-          display: none;
+            display: none;
         }
         background: #FFF9CC;
         background: radial-gradient(circle, #FFF9CC 0%, rgba(251, 237, 31, 1) 51%, rgba(255, 202, 7, 1) 100%);
@@ -90,45 +90,38 @@ form{
         opacity: 100%;
     }
 }
-
-
-
-
 .quotes{
-    h3{
-        font-weight: bold;
-
+    font-size: 15px;
+    .hash{
+        font-size: 18px;
+        letter-spacing: 1px;
     }
-    p{
-        font-weight: normal;
-        font-size: 10pt;
+}
+
+.video-button{
+    position: relative;
+    display: block;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 140px;
+    min-height: 28px;
+    text-align: right;
+    padding: 2px;
+    padding-right: 5px;
+    margin-left: 15px;
+    img {
+        width: 40px;
+        cursor: pointer;
+        border: none;
+        left: -18px;
+        top: -5px;
+
+        &:hover {
+            transform: scale(0.9);
+            transition: cubic-bezier();
+        }
     }
-  }
-
-  .video-button{
-      position: relative;
-      display: block;
-      background-color: white;
-      border-radius: 12px;
-      max-width: 140px;
-      min-height: 28px;
-      text-align: right;
-      padding: 2px;
-      padding-right: 5px;
-      margin-left: 15px;
-      img {
-          width: 40px;
-          cursor: pointer;
-          border: none;
-          left: -18px;
-          top: -5px;
-
-          &:hover {
-              transform: scale(0.9);
-              transition: cubic-bezier();
-          }
-      }
-  }
+}
 
 p{
     .text-big{
@@ -144,24 +137,19 @@ p{
     border-radius: 0 1rem 1rem 0;
     opacity: 80%;
     &:hover{
-      opacity: 100%;
+        opacity: 100%;
     }
     a &:hover{
-      translate: 200px 50px;
+        translate: 200px 50px;
     }
 }
 
 footer{
-    width: 100%;
-    height: 4%;
-    bottom: 0;
-    .footer{
         background-color: $color_green_1;
         color: white;
-        padding: 20px 0;
-    }
-    .footer-text{
-        margin-left: 400px;
-        font-size: 12pt;
+        height: 30px;
+        display: block;
+    div, a{
+        font-size: 12px;
     }
 }
