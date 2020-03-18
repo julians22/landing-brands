@@ -75,7 +75,7 @@
                                   if(errors.hasOwnProperty(i)){
                                     var find_input = $('#' + i);
                                     var error_msg = errors[i][0];
-                                    find_input.after(`<div class="text-danger futura_std_bold">`+ error_msg +`</div>`);
+                                    find_input.after(`<small class="text-danger futura_std_bold mb-n2">`+ error_msg +`</small>`);
                                     //
                                     // console.log(i);
                                     // console.log(errors[i][0]);

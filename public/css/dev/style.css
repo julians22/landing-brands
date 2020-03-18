@@ -190,26 +190,14 @@ form button.my-btn {
     font-size: 18px;
     letter-spacing: 1px; }
 
-.video-button {
+.video-button img {
   position: relative;
-  display: block;
-  background-color: white;
-  border-radius: 12px;
-  max-width: 140px;
-  min-height: 28px;
-  text-align: right;
-  padding: 2px;
-  padding-right: 5px;
-  margin-left: 15px; }
-  .video-button img {
-    width: 40px;
-    cursor: pointer;
-    border: none;
-    left: -18px;
-    top: -5px; }
-    .video-button img:hover {
-      transform: scale(0.9);
-      transition: cubic-bezier(); }
+  width: 200px;
+  cursor: pointer;
+  border: none; }
+  .video-button img:hover {
+    transform: scale(0.9);
+    transition: cubic-bezier(); }
 
 p .text-big {
   letter-spacing: 0.2em; }

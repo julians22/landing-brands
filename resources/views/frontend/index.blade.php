@@ -21,7 +21,7 @@
             </div>
             <div class="col-6">
                 <h2 class="optima_std text-white mb-0">#SiapEnergiAntiDrop</h2>
-                <p class="optima_std text-white quotes pr-3">Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) yang lebih dikenal dengan nama virus Corona (COVID19) adalah jenis baru dari coronavirus 
+                <p class="optima_std text-white quotes pr-3 mb-0">Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) yang lebih dikenal dengan nama virus Corona (COVID19) adalah jenis baru dari coronavirus 
                     yang menular ke manusia. Virus ini bisa menyerang siapa saja, baik bayi, anak-anak, orang dewasa, lansia, ibu hamil, maupun ibu menyusui. <br>
                     Mulailah untuk bisa bergaya hidup sehat dengan makan makanan sehat, tidur yang cukup agar Imun tubuh Anda semakin kuat. <br>            
                     BRAND’S Saripati ayam adalah suplemen kesehatan alami yang mengandung bio amino peptide protein yang terbuat dari saripati ayam murni, dikemas dengan teknologi modern tanpa adanya tambahan bahan kimia dan bahan pengawet sehingga aman di konsumsi siapapun (sampai ke ibu hamil dan menyusui) 
@@ -29,12 +29,9 @@
                     Minum BRAND’S 1 botol setiap harinya. <br>
                     <span class="yellow hash">#SiapEnergiAntiDrop</span>
                 </p>
-                <div class="video-button futura_std_bold green mt-n2">
-                    <a href="//www.youtube.com" target="_blank">
-                        <img class="position-absolute" src="{{ asset('img/general/button-1.svg') }}">
+                    <a href="https://youtu.be/7KG1PYFtmZw" target="_blank" class="video-button">
+                        <img class="" src="{{ asset('img/general/button-1.png') }}">
                     </a>
-                    Science Video
-                </div>
                 </div>
             </div>
         <div class="row">
@@ -42,19 +39,19 @@
         </div>
     </div>
     <div class="col-sm-auto col-md-6 col-lg-4 col-xl-3 text-right">
-        <p class="futura_std_bold font-weight-normal text-white">hanya dengan mengisi lengkap data di bawah ini
+        <p class="futura_std_bold font-weight-normal text-white h6">hanya dengan mengisi lengkap data di bawah ini
             dan klik tombol submit</p>
         <form id="custForm" method="POST" action="{{ route('frontend.customer.store') }}">
             @csrf
-            <div class="form-group futura_std_bold font-weight-normal text-white">
+            <div class="form-group futura_std_bold font-weight-normal text-white mb-1">
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
             </div>
-            <div class="form-group futura_std_bold font-weight-normal text-white">
+            <div class="form-group futura_std_bold font-weight-normal text-white mb-1">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" name="email">
             </div>
-            <div class="form-group futura_std_bold font-weight-normal text-white">
+            <div class="form-group futura_std_bold font-weight-normal text-white mb-1">
                 <label for="nomor">HP</label>
                 <input type="text" class="form-control" id="nomor" name="nomor" value="{{ old('nomor') }}">
             </div>
@@ -70,7 +67,7 @@
                 </label>
             </div>
             <input type="hidden" name="recaptcha" id="recaptcha">
-            <button class="btn my-btn futura_std_bold green bg-warning" disabled>
+            <button class="btn my-btn futura_std_bold green bg-warning mt-2" disabled>
                 <span id="send">
                     <i class="fas fa-paper-plane mr-1"></i>
                 </span>

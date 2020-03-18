@@ -99,23 +99,11 @@ form{
 }
 
 .video-button{
-    position: relative;
-    display: block;
-    background-color: white;
-    border-radius: 12px;
-    max-width: 140px;
-    min-height: 28px;
-    text-align: right;
-    padding: 2px;
-    padding-right: 5px;
-    margin-left: 15px;
     img {
-        width: 40px;
+        position: relative;
+        width: 200px;
         cursor: pointer;
         border: none;
-        left: -18px;
-        top: -5px;
-
         &:hover {
             transform: scale(0.9);
             transition: cubic-bezier();
